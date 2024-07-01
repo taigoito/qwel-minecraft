@@ -2,33 +2,22 @@
 /**
  * Normarize
  */
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
-}
-
-html {
-  font-size: 16px;
-}
-@media (max-width: 599.9px) {
-  html {
-    font-size: 3.84vw;
-  }
 }
 
 body {
   margin: 0;
-  background-color: #ffffff;
-  color: #333333;
-  font-family: "游ゴシック", "Yu Gothic", sans-serif;
-  font-weight: 500;
-  -webkit-text-size-adjust: 100%;
+  background-color: #d8d8d8;
+  color: #333;
 }
 
 a {
-  color: #333333;
-  text-decoration: none;
+  color: #069;
+
+  &:hover {
+    color: #3cf;
+  }
 }
 
 img {
@@ -37,24 +26,91 @@ img {
   vertical-align: middle;
 }
 
-figure {
-  display: block;
+/**
+ * Site Header
+ */
+.siteHeader {
+  width: 54rem;
+  margin: auto;
+}
+
+/**
+ * Site Title
+ */
+.siteTitle {
   margin: 0;
+  padding: 1rem 0;
+  background: linear-gradient(#333, #3cf);
+  font-size: 2rem;
+  text-align: center;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+/**
+ * G Nav
+ */
+.gNav {
+  background-color: #fff;
 }
 
-th {
-  text-align: left;
+.gNav__menu {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  padding: 1rem 0;
+  text-align: center;
 }
 
-button, input, select, textarea {
-  font: inherit;
+.gNav__menuItem {
+  flex: 1 0 25%;
+  border-left: 1px solid #99f;
+
+  &:first-child {
+    border-left: none;
+  }
 }
 
-/*
+/**
+ * Main
+ */
+.main {
+  width: 54rem;
+  margin: auto;
+  background-color: #fff;
+}
+
+/**
  * Section
  */
+ .section {
+  padding: 1.5rem 3rem;
+
+  h2 {
+    border-bottom: 1px dashed #ccc;
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.33rem;
+  }
+
+  p {
+    margin: 0.75rem 0;
+    text-align: justify;
+  }
+}
+
+/**
+ * Footer
+ */
+.footer {
+  padding: 3rem 0;
+  background-color: #666;
+  color: #fff;
+  text-align: center;
+}
